@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CodeEval">
+    <test name="Tests">
+        <packages>
+            <package name="com.codeeval.tests" />
+        </packages>
+    </test>
+</suite>
+

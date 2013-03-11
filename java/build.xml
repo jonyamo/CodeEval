@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CodeEval" basedir="." default="compile">
+
+    <property name="dir.lib" value="${basedir}/lib" />
+    <property name="dir.src" value="${basedir}/src" />
+    <property name="dir.build" value="${basedir}/build" />
+    <property name="file.clean" value="**/*" />
+    <property name="file.build" value="**/*" />
+
+    <path id="classpath.run">
+        <path path="${dir.build}" />
+    </path>
+
+    <path id="classpath.build">
+        <path location="${dir.lib}/testng/testng-6.8.jar" />
+    </path>
+
+    <target name="setup">
+        <mkdir dir="${dir.build}" />
+    </target>
+
+    <!-- removed specified class files -->
+    <target name="clean" depends="setup">
+        <delete includeemptydirs="true">
+            <fileset dir="${dir.build}" includes="${file.clean}" />
+        </delete>
+    </target>
+
+    <!-- compile specified src files -->
+    <target name="compile" depends="setup,clean">
+        <javac includeantruntime="false" classpathref="classpath.build"
+            srcdir="${dir.src}" destdir="${dir.build}">
+            <include name="${file.build}.java" />
+        </javac>
+    </target>
+
+    <!-- run testng tests -->
+    <target name="test" depends="compile">
+        <taskdef resource="testngtasks" classpathref="classpath.build" />
+        <testng classpathref="classpath.run">
+            <xmlfileset dir="${basedir}" includes="testng.xml" />
+        </testng>
+    </target>
+
+    <!-- create new challenge files -->
+    <target name="new">
+        <echo message="creating ${CLASS}" />
+        <exec executable="sh" dir="${basedir}">
+            <arg value="create_new_files.sh"/>
+            <arg value="${CLASS}"/>
+        </exec>
+    </target>
+
+    <!-- run specified class file -->
+    <target name="run">
+        <echo message="running ${CLASS}" />
+        <antcall target="compile">
+            <param name="file.clean" value="**/${CLASS}.class" />
+            <param name="file.build" value="**/${CLASS}" />
+        </antcall>
+        <java classname="com.codeeval.challenges.${CLASS}" dir="${dir.build}"
+            fork="true">
+            <arg value="../src/com/codeeval/testdata/${CLASS}.txt" />
+        </java>
+    </target>
+
+</project>
