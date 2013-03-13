@@ -1,7 +1,7 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class sumint
 {
@@ -16,20 +16,10 @@ public class sumint
             }
 
             System.out.println(sum);
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
         }
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 

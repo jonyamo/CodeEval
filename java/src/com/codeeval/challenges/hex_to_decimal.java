@@ -1,7 +1,8 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.Hashtable;
+import java.util.Scanner;
 
 public class hex_to_decimal
 {
@@ -19,9 +20,6 @@ public class hex_to_decimal
                 // learning way
                 System.out.println(hexToDecimal(line));
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -59,13 +57,6 @@ public class hex_to_decimal
         }
 
         return decimal;
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 

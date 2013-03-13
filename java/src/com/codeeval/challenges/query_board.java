@@ -1,7 +1,7 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class query_board
 {
@@ -26,10 +26,6 @@ public class query_board
                     System.out.println(query(queryType, scanner.nextInt()));
                 }
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.printStackTrace();
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -64,13 +60,6 @@ public class query_board
         }
 
         return sum;
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 

@@ -6,10 +6,4 @@ import org.testng.annotations.*;
 
 public class longestlinesTest
 {
-    @Test
-    public void test()
-    {
-        System.out.println("longestlines tests pending...");
-        //Assert.assertEquals(true,true);
-    }
 }

@@ -1,7 +1,10 @@
-//package com.codeeval.challenges;
+package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
 
 public class longestlines implements Comparator<String>
 {
@@ -28,9 +31,6 @@ public class longestlines implements Comparator<String>
             }
 
             printLongestLines(numLines, lines);
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -44,13 +44,6 @@ public class longestlines implements Comparator<String>
         for (int i = lines.size(); i --> lines.size() - n;) {
             System.out.println(lines.get(i));
         }
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 
     public int compare(String x, String y)

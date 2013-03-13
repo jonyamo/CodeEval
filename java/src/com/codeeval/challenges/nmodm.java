@@ -1,7 +1,7 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class nmodm
 {
@@ -20,9 +20,6 @@ public class nmodm
 
                 System.out.println(modulo(n,m));
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -33,13 +30,6 @@ public class nmodm
     {
         int quotient = n/m;
         return n - m*quotient;
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 

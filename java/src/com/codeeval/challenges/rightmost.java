@@ -1,7 +1,7 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class rightmost
 {
@@ -20,20 +20,10 @@ public class rightmost
 
                 System.out.println(s.lastIndexOf(i));
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
         }
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 

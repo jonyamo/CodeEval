@@ -1,7 +1,8 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class happy_numbers
 {
@@ -19,9 +20,6 @@ public class happy_numbers
 
                 System.out.println(happyNum(n));
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -46,13 +44,6 @@ public class happy_numbers
             sums.add(sum);
             n = sum;
         }
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 

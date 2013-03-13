@@ -1,7 +1,7 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.TreeSet;
 
 public class intersection
 {
@@ -15,9 +15,6 @@ public class intersection
             while ((line = in.readLine()) != null) {
                 System.out.println(getIntersection(line));
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -42,13 +39,6 @@ public class intersection
 
         return intersection.toString().replaceAll("\\[", "")
             .replaceAll("\\]", "").replaceAll(" ", "");
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 

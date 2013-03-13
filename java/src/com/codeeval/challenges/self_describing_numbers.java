@@ -1,7 +1,7 @@
 package com.codeeval.challenges;
 
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class self_describing_numbers
 {
@@ -19,9 +19,6 @@ public class self_describing_numbers
 
                 System.out.println(isSelfDescribing(n)?"1":"0");
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: " + getMainClass() + " filename");
-            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -47,13 +44,6 @@ public class self_describing_numbers
     {
         int pos = word.indexOf(ch);
         return pos == -1 ? 0 : 1 + countCharacter(word.substring(pos+1),ch);
-    }
-
-    public static String getMainClass()
-    {
-        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
-        StackTraceElement main = stack[stack.length - 1];
-        return main.getClassName();
     }
 }
 
