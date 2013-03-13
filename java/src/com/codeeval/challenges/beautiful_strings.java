@@ -46,7 +46,7 @@ public class beautiful_strings
         // just lowercase everything.
         char[] chars = s.toLowerCase().toCharArray();
         
-        // create an array of occurrences and initialize all counts to 0;
+        // create an array of occurrences and initialize all counts to 0.
         int[] occurrences = new int[26];
         Arrays.fill(occurrences, 0);
 
@@ -58,7 +58,7 @@ public class beautiful_strings
             occurrences[c - 'a']++;
         }
 
-        // finally, value the most frequently appearing characters highest
+        // finally, value the most frequently appearing characters highest.
         Arrays.sort(occurrences);
         for (int i = 0; i < 26; ++i) {
             sum += occurrences[25 - i] * (26 - i);

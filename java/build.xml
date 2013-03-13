@@ -31,6 +31,7 @@
         <javac includeantruntime="false" classpathref="classpath.build"
             srcdir="${dir.src}" destdir="${dir.build}">
             <include name="${file.build}.java" />
+            <compilerarg value="-Xlint"/>
         </javac>
     </target>
 
