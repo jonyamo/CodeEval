@@ -18,7 +18,7 @@ public class happy_numbers
 
                 int n = scanner.nextInt();
 
-                System.out.println(happyNum(n));
+                System.out.println(isHappyNum(n)?"1":"0");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -26,7 +26,7 @@ public class happy_numbers
         }
     }
 
-    public static int happyNum(int n)
+    public static boolean isHappyNum(int n)
     {
         HashSet<Integer> sums = new HashSet<Integer>();
 
@@ -37,9 +37,9 @@ public class happy_numbers
                 n /= 10;
             }
             if (sum == 1) {
-                return 1;
+                return true;
             } else if (sums.contains(sum)) {
-                return 0;
+                return false;
             }
             sums.add(sum);
             n = sum;

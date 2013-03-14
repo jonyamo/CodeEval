@@ -9,7 +9,7 @@ public class happy_numbersTest
     @Test
     public void testHappyNum()
     {
-        Assert.assertEquals(happy_numbers.happyNum(7),1);
-        Assert.assertEquals(happy_numbers.happyNum(22),0);
+        Assert.assertEquals(happy_numbers.isHappyNum(7),true);
+        Assert.assertEquals(happy_numbers.isHappyNum(22),false);
     }
 }
