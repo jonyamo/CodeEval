@@ -4,7 +4,8 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Main
+//public class Main
+public class StackInterface
 {
     public static void main(String[] args)
     {
