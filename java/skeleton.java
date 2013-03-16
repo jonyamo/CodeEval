@@ -4,7 +4,7 @@ import java.io.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class skeleton
+public class Main
 {
     @Test
     public void testRun()
