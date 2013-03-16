@@ -1,4 +1,4 @@
-package com.codeeval.challenges.skeleton;
+package com.codeeval.challenges.FirstNonRepeatedCharacter;
 
 import java.io.*;
 import org.testng.Assert;
@@ -10,8 +10,8 @@ public class Main
     public void testRun()
     {
         String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/skeleton.txt";
-        String expectedOutput = "";
+            + "/hacking/CodeEval/testdata/FirstNonRepeatedCharacter.txt";
+        String expectedOutput = "y\nh\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }
 
@@ -25,6 +25,8 @@ public class Main
 
             String line;
             while ((line = in.readLine()) != null) {
+                output += getFirstNonRepeatingLetter(line);
+                output += "\n";
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,6 +39,20 @@ public class Main
     public static void main(String[] args)
     {
         System.out.print(run(args[0]));
+    }
+
+    public static String getFirstNonRepeatingLetter(String s)
+    {
+        String letter = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            letter = s.charAt(i) + "";
+            if (s.indexOf(letter) == s.lastIndexOf(letter)) {
+                return letter;
+            }
+        }
+
+        return letter;
     }
 }
 
