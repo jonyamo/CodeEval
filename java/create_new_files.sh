@@ -2,8 +2,8 @@
 
 BASEDIR=src/com/codeeval
 CHALLENGEDIR=$BASEDIR/challenges
-TESTSDIR=$BASEDIR/tests
+CLASSDIR=$CHALLENGEDIR/$1
 
-sed "s/skeleton/$1/g" $CHALLENGEDIR/skeleton.java > $CHALLENGEDIR/$1.java
-sed "s/skeleton/$1/g;s/\/\/System/System/" $TESTSDIR/skeletonTest.java > $TESTSDIR/$1Test.java
+mkdir -p $CLASSDIR
+sed "s/skeleton/$1/g" skeleton.java > $CLASSDIR/Main.java
 

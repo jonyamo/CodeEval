@@ -4,6 +4,7 @@
     <property name="dir.lib" value="${basedir}/lib" />
     <property name="dir.src" value="${basedir}/src" />
     <property name="dir.build" value="${basedir}/build" />
+    <property name="dir.testdata" value="${basedir}/../testdata" />
     <property name="file.clean" value="**/*" />
     <property name="file.build" value="**/*" />
 
@@ -61,7 +62,7 @@
         </antcall>
         <java classname="com.codeeval.challenges.${CLASS}" dir="${dir.build}"
             fork="true">
-            <arg value="../src/com/codeeval/testdata/${CLASS}.txt" />
+            <arg value="${dir.testdata}/${CLASS}.txt" />
         </java>
     </target>
 

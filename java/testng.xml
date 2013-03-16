@@ -2,7 +2,7 @@
 <suite name="CodeEval">
     <test name="Tests">
         <packages>
-            <package name="com.codeeval.tests" />
+            <package name="com.codeeval.challenges.*" />
         </packages>
     </test>
 </suite>
