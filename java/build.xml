@@ -57,10 +57,10 @@
     <target name="run">
         <echo message="running ${CLASS}" />
         <antcall target="compile">
-            <param name="file.clean" value="**/${CLASS}.class" />
-            <param name="file.build" value="**/${CLASS}" />
+            <param name="file.clean" value="**/${CLASS}/*.class" />
+            <param name="file.build" value="**/${CLASS}/*" />
         </antcall>
-        <java classname="com.codeeval.challenges.${CLASS}" dir="${dir.build}"
+        <java classname="com.codeeval.challenges.${CLASS}.Main" dir="${dir.build}"
             fork="true">
             <arg value="${dir.testdata}/${CLASS}.txt" />
         </java>
