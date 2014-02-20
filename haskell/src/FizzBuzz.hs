@@ -1,3 +1,5 @@
+-- CodeEval requires all modules to be called Main.
+-- module Main where
 module FizzBuzz where
 
 import System.Environment (getArgs)
@@ -17,10 +19,13 @@ process [f,b,n] =
       fizz = read f::Int
       buzz = read b::Int
   in  [fizzBuzz x fizz buzz | x <- [1..num]]
+process []    = []
+process (_:_) = []
 
 fizzBuzz :: Int -> Int -> Int -> String
 fizzBuzz x f b
-  | x `mod` (f*b) == 0 = "FB"
-  | x `mod` f     == 0 = "F"
-  | x `mod` b     == 0 = "B"
-  | otherwise          = show x
+  |  x `mod` f == 0
+  && x `mod` b == 0 = "FB"
+  | x `mod` f  == 0 = "F"
+  | x `mod` b  == 0 = "B"
+  | otherwise       = show x
