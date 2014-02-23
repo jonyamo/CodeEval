@@ -1,4 +1,3 @@
--- CodeEval requires all modules to be called Main.
 -- module Main where
 module SwapCase where
 
@@ -8,15 +7,11 @@ import System.Environment (getArgs)
 main = do
   (file:_) <- getArgs
   contents <- readFile file
-  putStr $ unlines             -- String   : join lines with separating newlines
-         $ map unwords         -- String   : join words with separating spaces
-         $ map process         -- [String] : process each list of words
-         $ map words           -- [String] : create a list of words
-         $ lines contents      -- [String] : create a list of lines
-
-process :: [String] -> [String]
-process [] = []
-process (x:xs) = swapCase x : process xs
+  putStr $ unlines
+         $ map unwords
+         $ map (map swapCase)
+         $ map words
+         $ lines contents
 
 swapCase :: String -> String
 swapCase [] = []
