@@ -5,11 +5,13 @@ class LowestUniqueNumber
 {
     protected $submissions;
 
-    public function __construct(array $submissions=array()) {
+    public function __construct(array $submissions=array())
+    {
         $this->submissions = $submissions;
     }
 
-    public function getWinner() {
+    public function getWinner()
+    {
         $values = array_count_values($this->submissions);
         $singles = array_filter($values, function($n) { return $n == 1; });
         if (count($singles) == 0) {
