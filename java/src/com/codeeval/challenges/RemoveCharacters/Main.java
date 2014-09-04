@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/RemoveCharacters.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/RemoveCharacters.txt";
         String expectedOutput = "how re you\nhllo worl\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

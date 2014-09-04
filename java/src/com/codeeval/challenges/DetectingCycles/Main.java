@@ -11,8 +11,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/DetectingCycles.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/DetectingCycles.txt";
         String expectedOutput = "6 3 1\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

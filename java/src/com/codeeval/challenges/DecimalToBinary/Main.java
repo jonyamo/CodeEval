@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/DecimalToBinary.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/DecimalToBinary.txt";
         String expectedOutput = "10\n1010\n1000011\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

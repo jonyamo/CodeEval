@@ -11,8 +11,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/HexToDecimal.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/HexToDecimal.txt";
         String expectedOutput = "159\n17\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

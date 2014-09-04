@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/SumOfIntegersFromFile.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/SumOfIntegersFromFile.txt";
         String expectedOutput = "17\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

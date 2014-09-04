@@ -11,8 +11,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/NumberPairs.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/NumberPairs.txt";
         String expectedOutput = "1,4;2,3\n5,15;9,11\nNULL\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

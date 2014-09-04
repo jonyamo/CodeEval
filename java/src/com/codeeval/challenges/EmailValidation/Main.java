@@ -32,8 +32,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/EmailValidation.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/EmailValidation.txt";
         String expectedOutput = "true\nfalse\nfalse\ntrue\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

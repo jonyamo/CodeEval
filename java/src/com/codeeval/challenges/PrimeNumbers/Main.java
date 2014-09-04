@@ -65,8 +65,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/PrimeNumbers.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/PrimeNumbers.txt";
         String expectedOutput =
             "2,3,5,7\n" +
             "2,3,5,7,11,13,17,19\n" +

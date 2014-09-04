@@ -60,8 +60,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/ReverseAndAdd.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/ReverseAndAdd.txt";
         String expectedOutput = "4 9339\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

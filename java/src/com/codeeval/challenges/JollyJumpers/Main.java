@@ -11,8 +11,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/JollyJumpers.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/JollyJumpers.txt";
         String expectedOutput = "Jolly\nNot jolly\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

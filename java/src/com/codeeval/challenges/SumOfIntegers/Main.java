@@ -11,8 +11,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/SumOfIntegers.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/SumOfIntegers.txt";
         String expectedOutput = "8\n12\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

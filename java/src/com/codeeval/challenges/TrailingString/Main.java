@@ -12,8 +12,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/TrailingString.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/TrailingString.txt";
         String expectedOutput = "1\n1\n0\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

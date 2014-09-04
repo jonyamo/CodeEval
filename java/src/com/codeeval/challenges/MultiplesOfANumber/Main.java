@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/MultiplesOfANumber.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/MultiplesOfANumber.txt";
         String expectedOutput = "16\n32\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/RightmostChar.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/RightmostChar.txt";
         String expectedOutput = "8\n10\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

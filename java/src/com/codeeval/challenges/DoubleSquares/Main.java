@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/DoubleSquares.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/DoubleSquares.txt";
         String expectedOutput = "1\n2\n0\n1\n1\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

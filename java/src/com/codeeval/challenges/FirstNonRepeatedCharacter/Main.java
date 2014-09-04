@@ -9,8 +9,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/FirstNonRepeatedCharacter.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/FirstNonRepeatedCharacter.txt";
         String expectedOutput = "y\nh\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

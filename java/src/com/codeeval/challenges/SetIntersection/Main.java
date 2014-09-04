@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/SetIntersection.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/SetIntersection.txt";
         String expectedOutput = "4\n8,9\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

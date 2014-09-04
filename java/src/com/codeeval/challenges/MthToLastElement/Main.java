@@ -11,8 +11,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/MthToLastElement.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/MthToLastElement.txt";
         String expectedOutput = "a\ng\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

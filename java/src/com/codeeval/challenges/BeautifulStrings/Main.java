@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/BeautifulStrings.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/BeautifulStrings.txt";
         String expectedOutput = "152\n754\n491\n729\n646\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }
@@ -62,7 +62,7 @@ public class Main
         // uppercase vs lowercase doesn't affect the beauty of a character, so
         // just lowercase everything.
         char[] chars = s.toLowerCase().toCharArray();
-        
+
         // create an array of occurrences and initialize all counts to 0.
         int[] occurrences = new int[26];
         Arrays.fill(occurrences, 0);

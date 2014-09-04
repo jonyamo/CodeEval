@@ -36,8 +36,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/StackImplementation.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/StackImplementation.txt";
         String expectedOutput = "4 2\n4 -2\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

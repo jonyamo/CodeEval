@@ -9,8 +9,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/SumOfDigits.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/SumOfDigits.txt";
         String expectedOutput = "5\n19\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

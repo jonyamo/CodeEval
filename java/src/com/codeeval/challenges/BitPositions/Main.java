@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/BitPositions.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/BitPositions.txt";
         String expectedOutput = "true\nfalse\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

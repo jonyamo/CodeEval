@@ -11,8 +11,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/UniqueElements.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/UniqueElements.txt";
         String expectedOutput = "1,2,3,4\n2,3,4,5\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

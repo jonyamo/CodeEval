@@ -14,8 +14,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/QueryBoard.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/QueryBoard.txt";
         String expectedOutput = "5118\n34\n1792\n3571\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }

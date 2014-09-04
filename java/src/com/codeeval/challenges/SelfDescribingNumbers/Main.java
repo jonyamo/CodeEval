@@ -10,8 +10,8 @@ public class Main
     @Test
     public void testRun()
     {
-        String filename = System.getProperty("user.home")
-            + "/hacking/CodeEval/testdata/SelfDescribingNumbers.txt";
+        String filename = System.getProperty("user.dir")
+            + "/../testdata/SelfDescribingNumbers.txt";
         String expectedOutput = "1\n0\n1\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }
