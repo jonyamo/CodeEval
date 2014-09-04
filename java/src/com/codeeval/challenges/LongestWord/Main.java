@@ -1,4 +1,4 @@
-package com.codeeval.challenges.skeleton;
+package com.codeeval.challenges.LongestWord;
 
 import java.io.*;
 import org.testng.Assert;
@@ -10,8 +10,8 @@ public class Main
     public void testRun()
     {
         String filename = System.getProperty("user.dir")
-            + "/../testdata/skeleton.txt";
-        String expectedOutput = "";
+            + "/../testdata/LongestWord.txt";
+        String expectedOutput = "some\nanother\nactually\n";
         Assert.assertEquals(run(filename),expectedOutput);
     }
 
@@ -25,6 +25,7 @@ public class Main
 
             String line;
             while ((line = in.readLine()) != null) {
+                output += getLongestWord(line) + "\n";
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,6 +38,18 @@ public class Main
     public static void main(String[] args)
     {
         System.out.print(run(args[0]));
+    }
+
+    public static String getLongestWord(String line)
+    {
+        String longestWord = "";
+        String[] words = line.split(" ");
+        for (String word : words) {
+            if (word.length() > longestWord.length()) {
+                longestWord = word;
+            }
+        }
+        return longestWord;
     }
 }
 
